@@ -1,0 +1,57 @@
+.welcome-header {
+  margin: 90px 0px; /*상태바와 헤더와 input 사이에 간격 설정 */
+  text-align: center; /*text를 중앙으로 정렬*/
+  display: flex; /*welcome-header__text를 center로 만들기 위해 */
+  flex-direction: column; /* flexbox들을 수직으로 정렬*/
+  align-items: center; /*flexbox 안의 item을 중앙으로 정렬*/
+}
+.welcome-header__title {
+  margin-bottom: 20px; /*header의 title과 text 간격 설정*/
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7; /*회색으로 만들 수 있지만 투명도로 이용했다 */
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px; /*가로로 꽉 차있는걸 좌우에 공간을 부여함*/
+}
+
+#login-form input {
+  border: none;
+  font-size: 18px;
+  padding: 15px 0px; /*내부로 여백을 줘서 box의 크기를 크게 만듬 */
+  margin-bottom: 25px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4); /*검은색으로 투명도를 적용시킨다., submit 제외*/
+  transition: border-color 0.3s ease-in-out; /*클릭했을 때 border의 색이 부드럽게 변화, submit 제외*/
+}
+
+#login-form input::placeholder {
+  /*input에 class를 지정안해서 ::placeholder 사용*/
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  /*input을 클릭했을 때 노란색으로 변경되게 */
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer; /*마우스를 올렸을 때 커서 모양을 pointer로, 윈도우에서는 안보일수도*/
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none; /*링크 default 밑줄 제거*/
+  color: inherit;
+  font-size: 13px;
+}

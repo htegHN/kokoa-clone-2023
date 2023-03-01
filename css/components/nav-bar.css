@@ -1,0 +1,44 @@
+.nav {
+  position: fixed; /*스크롤을 내려도 고정된 위치에 있게 */
+  bottom: 0;
+  width: 100%; /*부모 너비를 다 받게끔, 50%면 부모의 반만큼의 너비만 사용함*/
+  background-color: #f9f9fa;
+  padding: 20px 45px;
+  box-sizing: border-box; /*total box size를 변경하지 않게끔 */
+  border-top: 1px solid rgba(110, 109, 109, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between; /*좌우로 꽉차게 정렬*/
+}
+.nav__link {
+  position: relative; /*position:absolute를 위해 부모를 relative로 만듦*/
+  color: #2e363e;
+}
+
+.nav__notification {
+  /*동그란 숫자가 담긴 원 말들기*/
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; /*사각형 width의 반 값을 작성하면 원으로 변한다 */
+  display: flex; /*너비와 높이만 적용시키면 span이어서 변형되지 않으므로 flex로 만든다*/
+  justify-content: center; /*flex를 중앙에 배치*/
+  align-items: center; /*item(숫자 1)을 중앙에 배치*/
+  color: white;
+  font-weight: 600;
+  /* 아이콘 오른쪽 상단에 숫자가 오게 만들기 */
+  position: absolute; /*부모를 기준으로 위에 배치*/
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__eli-notification {
+  background-color: tomato;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  right: -4px;
+}

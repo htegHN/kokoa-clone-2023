@@ -1,0 +1,16 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*세로로 중앙으로 정렬*/
+  padding: var(--horizontal-space);
+  padding-top: 35px;
+}
+
+.screen-header__title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 13px;
+}
