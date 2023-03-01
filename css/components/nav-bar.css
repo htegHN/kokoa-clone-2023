@@ -17,16 +17,6 @@
 }
 
 .nav__notification {
-  /*동그란 숫자가 담긴 원 말들기*/
-  background-color: tomato;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px; /*사각형 width의 반 값을 작성하면 원으로 변한다 */
-  display: flex; /*너비와 높이만 적용시키면 span이어서 변형되지 않으므로 flex로 만든다*/
-  justify-content: center; /*flex를 중앙에 배치*/
-  align-items: center; /*item(숫자 1)을 중앙에 배치*/
-  color: white;
-  font-weight: 600;
   /* 아이콘 오른쪽 상단에 숫자가 오게 만들기 */
   position: absolute; /*부모를 기준으로 위에 배치*/
   left: 15px;
