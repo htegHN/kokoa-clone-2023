@@ -25,10 +25,10 @@
 
 .nav__eli-notification {
   background-color: tomato;
+  display: flex;
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  display: flex;
   position: absolute;
-  right: -4px;
+  right: -5px;
 }

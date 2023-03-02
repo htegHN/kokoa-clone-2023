@@ -5,6 +5,7 @@
   display: flex; /* 같은 줄에 작성되게 끔 */
   justify-content: center;
   padding: 5px 3px;
+  font-size: 12px;
 }
 .status-bar__column {
   width: 33%;
