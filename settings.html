@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chats - Kokoa Clone</title>
+    <title>Settings - Kokoa Clone</title>
     <!-- title 수정 -->
   </head>
+
   <body>
     <div class="status-bar">
       <div class="status-bar__column">
@@ -30,38 +31,43 @@
       </div>
     </div>
 
-    <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
-      <div class="screen-header__icons">
-        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-regular fa-comment-dots fa-lg"></i></span>
-        <span><i class="fa-solid fa-music fa-lg"></i></span>
-        <span
-          ><a href="settings.html"><i class="fa-solid fa-gear fa-lg"></i></a>
-        </span>
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="more.html"><i class="fa-solid fa-angle-left fa-2x"></i></a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Settings</h1>
+      </div>
+
+      <div class="alt-header__column">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+
+        <!-- 아이콘을 하나 더 만들엇ㅇ르 때 치우쳐진다-->
       </div>
     </header>
 
+    <!-- 기존의 main-screen 설정을 이용하여 main-screen 제작 -->
     <main class="main-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="https://avatars.githubusercontent.com/u/3612017?s=40&v=4"
-            class="user-component__avatar user-component__avatar"
-          />
-          <!--같은 avatar인데 xl인 avatar로 분류해주자.-->
-          <div class="user-component__text">
-            <h4 class="user-component__title">Nicolas</h4>
-            <h6 class="user-component__subtitle">
-              Please check My Kokoa Account Info
-            </h6>
+      <ul class="settings-llst">
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <span><i class="fa-solid fa-bullhorn"></i>Notices</span>
           </div>
-        </div>
-        <div class="user-component__column">
-          <span class="user-component__time">21:22</span>
-          <div class="badge">1</div>
-        </div>
-      </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <span><i class="fa-solid fa-flask"></i>Kokoa Lab</span>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <span><i class="fa-solid fa-circle-info"></i>Version</span>
+          </div>
+          <div class="settings__setting-column">Latest Version</div>
+        </li>
+      </ul>
     </main>
 
     <nav class="nav">
@@ -76,7 +82,7 @@
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span
-            ><i class="fa-solid fa-comment fa-2x"></i
+            ><i class="fa-regular fa-comment fa-2x"></i
           ></a>
         </li>
         <li class="nav__btn">
@@ -93,10 +99,10 @@
       </ul>
     </nav>
 
+    <!--아이콘 사용하기 위한 fontawesome kit code 설치 -->
     <script
       src="https://kit.fontawesome.com/c88b3258e5.js"
       crossorigin="anonymous"
     ></script>
-    <!--아이콘 사용하기 위한 fontawesome kit code 설치 -->
   </body>
 </html>
