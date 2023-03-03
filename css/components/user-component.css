@@ -56,3 +56,26 @@
   margin-bottom: 5px;
   display: block;
 }
+
+.user-component__text {
+  position: relative;
+}
+.user-component__subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__bang {
+  display: flex;
+  font-size: 7px;
+  color: red;
+  width: 10px;
+  height: 10px;
+  border: 1px solid red;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  position: absolute;
+  right: -15px;
+}

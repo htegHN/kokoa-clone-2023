@@ -1,6 +1,7 @@
 .status-bar {
   position: fixed;
   top: 0;
+
   width: 100%; /*fixed를 통해 고정만 시켜주면 깨지므로 부모의 너비에 맞게 배열*/
   display: flex; /* 같은 줄에 작성되게 끔 */
   justify-content: center;
