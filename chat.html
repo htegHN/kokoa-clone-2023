@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat w/ Nico - Kokoa Clone</title>
+    <!-- title 수정 -->
+  </head>
+
+  <!--배경색을 주기 위해 body에 id 지정 -->
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fa-solid fa-wifi"></i>
+        <!-- wifi icon -->
+      </div>
+
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+
+      <!-- Battery Icon -->
+
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fa-solid fa-battery-full fa-ls"></i>
+        <i class="fa-solid fa-bolt"></i>
+        <!-- lightning Icon -->
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html"><i class="fa-solid fa-angle-left fa-2x"></i></a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">니꼬</h1>
+      </div>
+
+      <div class="alt-header__column">
+        <span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+        <span class="alt-header__column-bars">
+          <i class="fa-solid fa-bars fa-xl"></i
+        ></span>
+      </div>
+    </header>
+
+    <!-- 기존의 main-screen 설정을 이용하여 main-screen 제작 -->
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Tuesday, June 30, 2020</div>
+      <!-- message 행 만들기 -->
+      <div class="message-row">
+        <img src="https://avatars.githubusercontent.com/u/3612017?s=40&v=4" />
+        <div class="message-row__content">
+          <span class="message__author">니꼬</span>
+          <div class="message__info">
+            <span class="message__bubble">Hi!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- message 두번째 행 만들기 -->
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">Hi nice to meet you!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Wirte Message Input 창 만들기 -->
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-square-plus fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <button><i class="fa-solid fa-arrow-up"></i></button>
+      </div>
+    </form>
+
+    <!--아이콘 사용하기 위한 fontawesome kit code 설치 -->
+    <script
+      src="https://kit.fontawesome.com/c88b3258e5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
