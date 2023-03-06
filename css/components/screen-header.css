@@ -19,3 +19,18 @@
 .screen-header__icons span {
   position: relative;
 }
+
+/* cog(기어) 아이콘에만 animation 적용해보기 */
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateCog 2s linear infinite;
+}

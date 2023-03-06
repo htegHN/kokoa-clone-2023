@@ -16,19 +16,68 @@
   color: #2e363e;
 }
 
+/* 애니메이션 적용 */
+
+@keyframes notificationAnimation {
+  /*nav-bar에 숫자 1이 담긴 원을 움직에게 */
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .nav__notification {
   /* 아이콘 오른쪽 상단에 숫자가 오게 만들기 */
   position: absolute; /*부모를 기준으로 위에 배치*/
   left: 15px;
   bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 .nav__eli-notification {
   background-color: tomato;
   display: flex;
-  height: 5px;
-  width: 5px;
+  height: 7px;
+  width: 7px;
   border-radius: 50%;
   position: absolute;
   right: -5px;
+}
+
+/* animation을 통해 바가 처음에 자연스럽게 올라오게  */
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav__btn {
+  /* 원래는 translateY를 keyframes 안에 적었지만 그렇게 될 경우
+  아래 delay시킨 element가 자기 순서가 올 때까지 내려가지 않고 제자리에 있다가 
+  자기 차례일 때 내려갔다가 올라가는 원하지 않는 결과가 나온다. 
+  그래서 처음부터 먼저 내려가있게끔 transform을 부여한다음 자기 순서일 때 
+  to에서 transform:none에 의해 부드럽게 올라가는거처럼 보이게 된다.  */
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+}
+
+/* animation delay를 통해 하나씩 올라오게 (처음을 제외하고 나머지를 delay주면 된다.)*/
+.nav__btn:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.3s;
 }
